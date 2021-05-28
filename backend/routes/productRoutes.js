@@ -28,7 +28,7 @@ router.get('/:id', async (req, res) => {
             res.status(404).json({ message: "Product not found" })
         }
     } catch (err) {
-        res.status(500).send({ err: err.message })
+        res.sendStatus(500)
     }
 });
 
